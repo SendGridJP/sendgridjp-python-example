@@ -3,7 +3,11 @@ from smtpapi import SMTPAPIHeader
 header = SMTPAPIHeader()
 
 #header.set_substitutions({'fullname': ['田中 太郎', '佐藤 次郎', '鈴木 三郎'], "familyname": ["田中", "佐藤", "鈴木"], "place": ["office", "home", "office"]})
-header.add_substitution('fullname', ['田中 太郎', '佐藤 次郎', '鈴木 三郎'])
+#header.add_substitution('fullname', ['田中 太郎', '佐藤 次郎', '鈴木 三郎'])
+header.add_substitution('fullname', '田中 太郎')
+header.add_substitution('fullname', '佐藤 次郎')
+header.add_substitution('fullname', '鈴木 三郎')
+
 header.add_substitution("familyname", ["田中", "佐藤", "鈴木"])
 header.add_substitution("place", ["office", "home", "office"])
 header.add_section('office', '中野')
