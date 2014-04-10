@@ -31,6 +31,5 @@ message.add_category('カテゴリ1')
 message.add_attachment('gif.gif', './gif.gif')
 
 status, msg = sg.send(message)
-
 print(status)
 print(msg)
