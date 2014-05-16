@@ -10,6 +10,7 @@ cd sendgridjp-python-example
 cp .env.example .env
 # .envファイルを編集してください
 pip install sendgrid
+pip install dotenv
 python3.2 sendgrid-python-example.js
 ```
 
