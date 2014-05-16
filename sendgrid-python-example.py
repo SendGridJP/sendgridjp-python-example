@@ -1,13 +1,13 @@
 import sendgrid
-import configparser
+from dotenv import Dotenv
 
-config = configparser.ConfigParser()
-config.read('.env')
+config = Dotenv('./.env')
 
-sendgrid_username = config.get('SENDGRID', 'SENDGRID_USERNAME')
-sendgrid_password = config.get('SENDGRID', 'SENDGRID_PASSWORD')
-tos = config.get('SENDGRID', 'TOS').split(',')
-from_address = config.get('SENDGRID', 'FROM')
+
+sendgrid_username = config['SENDGRID_USERNAME']
+sendgrid_password = config['SENDGRID_PASSWORD']
+tos = config['TOS'].split(',')
+from_address = config['FROM']
 
 sg = sendgrid.SendGridClient(sendgrid_username, sendgrid_password)
 message = sendgrid.Mail()
