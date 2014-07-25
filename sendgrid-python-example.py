@@ -27,7 +27,7 @@ for place in place_list:
   message.add_substitution("place", place)
 message.add_section('office', '中野')
 message.add_section('home', '目黒')
-message.add_category('カテゴリ1')
+message.add_category('category1')
 message.add_attachment('gif.gif', './gif.gif')
 
 status, msg = sg.send(message)
