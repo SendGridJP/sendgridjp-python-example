@@ -11,7 +11,7 @@ cp .env.example .env
 # .envファイルを編集してください
 pip install sendgrid
 pip install dotenv
-python3.2 sendgrid-python-example.js
+python sendgrid-python-example.js
 ```
 
 ## .envファイルの編集
@@ -27,5 +27,3 @@ SENDGRID_USERNAME:SendGridのユーザ名を指定してください。
 SENDGRID_PASSWORD:SendGridのパスワードを指定してください。  
 TOS:宛先をカンマ区切りで指定してください。  
 FROM:送信元アドレスを指定してください。  
-
-

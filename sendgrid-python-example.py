@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sendgrid
 from dotenv import Dotenv
 
@@ -11,7 +12,7 @@ from_address = config['FROM']
 
 sg = sendgrid.SendGridClient(sendgrid_username, sendgrid_password)
 message = sendgrid.Mail()
-message.add_to(tos)
+message.smtpapi.add_to(tos)
 message.set_from('送信者名 <' + from_address + '>')
 message.set_subject('[sendgrid-python-example] フクロウのお名前はfullnameさん')
 message.set_text('familyname さんは何をしていますか？\r\n 彼はplaceにいます。')
