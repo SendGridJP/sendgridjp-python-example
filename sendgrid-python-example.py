@@ -5,12 +5,11 @@ from dotenv import Dotenv
 config = Dotenv('./.env')
 
 
-sendgrid_username = config['SENDGRID_USERNAME']
-sendgrid_password = config['SENDGRID_PASSWORD']
+api_key = config['API_KEY']
 tos = config['TOS'].split(',')
 from_address = config['FROM']
 
-sg = sendgrid.SendGridClient(sendgrid_username, sendgrid_password)
+sg = sendgrid.SendGridClient(api_key)
 message = sendgrid.Mail()
 message.smtpapi.add_to(tos)
 message.set_from('送信者名 <' + from_address + '>')
