@@ -2,9 +2,10 @@
 import sendgrid
 from dotenv import Dotenv
 
+
+
+
 config = Dotenv('./.env')
-
-
 api_key = config['API_KEY']
 tos = config['TOS'].split(',')
 from_address = config['FROM']
