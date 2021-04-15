@@ -5,13 +5,13 @@
 ## 使い方
 
 ```bash
-git clone http://github.com/sendgridjp/sendgridjp-python-example.git
+git clone git@github.com:SendGridJP/sendgridjp-python-example.git
 cd sendgridjp-python-example
 cp .env.example .env
 # .envファイルを編集してください
-pip install sendgrid
-pip install dotenv
-python sendgrid-python-example.js
+pipenv install
+pipenv shell
+python sendgrid-python-example.py
 ```
 
 ## .envファイルの編集
