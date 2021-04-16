@@ -34,7 +34,7 @@ message.from_email = From(from_address, '送信者名')
 message.subject = Subject('[sendgrid-python-example] フクロウのお名前はfullnameさん')
 
 # 本文（テキストパートとHTMLパート）を指定
-message.content = Content(MimeType.text, 'familyname さんは何をしていますか？rn 彼はplaceにいます。')
+message.content = Content(MimeType.text, 'familyname さんは何をしていますか？\r\n 彼はplaceにいます。')
 message.content = Content(MimeType.html, '<strong>familyname さんは何をしていますか？</strong><br />彼はplaceにいます。')
     
 # カテゴリ情報を付加
